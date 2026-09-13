@@ -1,0 +1,278 @@
+/* ======================================================
+   assets/style.css
+   External CSS untuk Sistem Informasi Pendataan Mahasiswa
+====================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9e9e9;
+    color: #222222;
+    font-size: 14px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============ HEADER ============ */
+
+header.site-header {
+    background-color: #1a56db;
+    border-bottom: 1px solid #123f9e;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.brand img.logo {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+.brand h1 {
+    font-size: 1.6rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.brand p {
+    font-size: 0.85rem;
+    color: #d9e4ff;
+    font-style: italic;
+}
+
+header.site-header nav.top-nav a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+header.site-header nav.top-nav a:hover {
+    color: #ffe08a;
+}
+
+/* ============ LAYOUT ============ */
+
+.layout {
+    display: flex;
+    flex: 1;
+}
+
+/* ============ SIDEBAR ============ */
+
+aside.sidebar {
+    width: 200px;
+    flex-shrink: 0;
+    background-color: #dcdcdc;
+    border-right: 1px solid #bcbcbc;
+}
+
+aside.sidebar h2 {
+    background-color: #cfcfcf;
+    padding: 8px 14px;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+aside.sidebar nav ul {
+    list-style: none;
+    padding: 10px 14px;
+}
+
+aside.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+aside.sidebar nav ul li a {
+    color: #1a56db;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+aside.sidebar nav ul li a:hover {
+    color: #0d3fa0;
+}
+
+aside.sidebar nav ul li a.active {
+    font-weight: bold;
+    color: #0d3fa0;
+}
+
+/* ============ MAIN CONTENT ============ */
+
+main.content {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 0;
+}
+
+main.content h2.content-title {
+    background-color: #d7d7d7;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.content-body {
+    padding: 20px 24px;
+}
+
+.welcome-box h3 {
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.welcome-box p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* ============ TABLE BIODATA ============ */
+
+.content-body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content-body table td {
+    padding: 6px 0;
+}
+
+/* ============ FORM ============ */
+
+form.biodata-form .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+form.biodata-form label {
+    width: 110px;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+}
+
+form.biodata-form .colon {
+    width: 14px;
+    flex-shrink: 0;
+}
+
+form.biodata-form input[type="text"],
+form.biodata-form input[type="password"],
+form.biodata-form select,
+form.biodata-form textarea {
+    border: 1px solid #b5b5b5;
+    padding: 5px 8px;
+    font-size: 0.85rem;
+    background-color: #ffffff;
+    font-family: inherit;
+}
+
+form.biodata-form input[type="text"],
+form.biodata-form input[type="password"] {
+    width: 240px;
+}
+
+form.biodata-form select {
+    width: 160px;
+}
+
+form.biodata-form textarea {
+    width: 320px;
+    height: 90px;
+    resize: vertical;
+}
+
+form.biodata-form .options {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+form.biodata-form .options label {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.85rem;
+}
+
+form.biodata-form .form-actions {
+    margin-left: 124px;
+    margin-top: 16px;
+}
+
+form.biodata-form button {
+    background-color: #e2e2e2;
+    border: 1px solid #a5a5a5;
+    padding: 6px 22px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+form.biodata-form button:hover {
+    background-color: #cfcfcf;
+}
+
+/* ============ FOOTER ============ */
+
+footer.site-footer {
+    background-color: #10122e;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 650px) {
+
+    .layout {
+        flex-direction: column;
+    }
+
+    aside.sidebar {
+        width: auto;
+    }
+
+    form.biodata-form .form-row {
+        flex-wrap: wrap;
+    }
+
+    form.biodata-form .form-actions {
+        margin-left: 0;
+    }
+
+    header.site-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
